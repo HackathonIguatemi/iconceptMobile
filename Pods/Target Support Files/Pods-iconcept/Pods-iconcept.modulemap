@@ -1,0 +1,6 @@
+framework module Pods_iconcept {
+  umbrella header "Pods-iconcept-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,14 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC705EC52156B16D00E2BF30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC705EC42156B16D00E2BF30 /* GoogleService-Info.plist */; };
+		BC705ECE2156B28F00E2BF30 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705ECB2156B28E00E2BF30 /* TextField.swift */; };
+		BC705ECF2156B28F00E2BF30 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705ECC2156B28F00E2BF30 /* RoundedButton.swift */; };
+		BC705ED02156B28F00E2BF30 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705ECD2156B28F00E2BF30 /* CircleView.swift */; };
+		BC705ED22156B29B00E2BF30 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705ED12156B29A00E2BF30 /* LoginVC.swift */; };
+		BC705ED62156B4BA00E2BF30 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705ED32156B4B900E2BF30 /* DataService.swift */; };
+		BC705ED72156B4BA00E2BF30 /* Localtion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705ED42156B4BA00E2BF30 /* Localtion.swift */; };
+		BC705ED82156B4BA00E2BF30 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705ED52156B4BA00E2BF30 /* Constants.swift */; };
+		BC705EDB2156E75600E2BF30 /* collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705EDA2156E75600E2BF30 /* collection.swift */; };
+		BC705EDD2156EDDC00E2BF30 /* collectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705EDC2156EDDC00E2BF30 /* collectionCell.swift */; };
+		BC705EDF2156F37700E2BF30 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705EDE2156F37700E2BF30 /* Slide.swift */; };
+		BC705EE12156F39000E2BF30 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC705EE02156F39000E2BF30 /* Slide.xib */; };
 		BCACA7A32156AD3C005C715C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCACA7A22156AD3C005C715C /* AppDelegate.swift */; };
 		BCACA7A52156AD3C005C715C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCACA7A42156AD3C005C715C /* ViewController.swift */; };
 		BCACA7A82156AD3C005C715C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCACA7A62156AD3C005C715C /* Main.storyboard */; };
 		BCACA7AA2156AD3D005C715C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCACA7A92156AD3D005C715C /* Assets.xcassets */; };
 		BCACA7AD2156AD3D005C715C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCACA7AB2156AD3D005C715C /* LaunchScreen.storyboard */; };
+		D195C1C6E5A85CD1106D1146 /* Pods_iconcept.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661A35D1DDACDE9480179348 /* Pods_iconcept.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B39CF325DFE89E67974D9A6 /* Pods-iconcept.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iconcept.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iconcept/Pods-iconcept.debug.xcconfig"; sourceTree = "<group>"; };
+		661A35D1DDACDE9480179348 /* Pods_iconcept.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iconcept.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFBF88B7C3382257472E1561 /* Pods-iconcept.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iconcept.release.xcconfig"; path = "Pods/Target Support Files/Pods-iconcept/Pods-iconcept.release.xcconfig"; sourceTree = "<group>"; };
+		BC705EC42156B16D00E2BF30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		BC705ECB2156B28E00E2BF30 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		BC705ECC2156B28F00E2BF30 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		BC705ECD2156B28F00E2BF30 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		BC705ED12156B29A00E2BF30 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		BC705ED32156B4B900E2BF30 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		BC705ED42156B4BA00E2BF30 /* Localtion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localtion.swift; sourceTree = "<group>"; };
+		BC705ED52156B4BA00E2BF30 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BC705EDA2156E75600E2BF30 /* collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collection.swift; sourceTree = "<group>"; };
+		BC705EDC2156EDDC00E2BF30 /* collectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionCell.swift; sourceTree = "<group>"; };
+		BC705EDE2156F37700E2BF30 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		BC705EE02156F39000E2BF30 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		BCACA79F2156AD3C005C715C /* iconcept.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iconcept.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCACA7A22156AD3C005C715C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCACA7A42156AD3C005C715C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +57,76 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D195C1C6E5A85CD1106D1146 /* Pods_iconcept.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F78C063D834BEAA7FBDB128 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B39CF325DFE89E67974D9A6 /* Pods-iconcept.debug.xcconfig */,
+				AFBF88B7C3382257472E1561 /* Pods-iconcept.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC705EC62156B24700E2BF30 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		BC705EC72156B24F00E2BF30 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BC705ED52156B4BA00E2BF30 /* Constants.swift */,
+				BC705ED32156B4B900E2BF30 /* DataService.swift */,
+				BC705ED42156B4BA00E2BF30 /* Localtion.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		BC705EC82156B26000E2BF30 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				BC705ECD2156B28F00E2BF30 /* CircleView.swift */,
+				BC705ECC2156B28F00E2BF30 /* RoundedButton.swift */,
+				BC705ECB2156B28E00E2BF30 /* TextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		BC705EC92156B26800E2BF30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC705EDA2156E75600E2BF30 /* collection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC705ECA2156B26E00E2BF30 /* Controlller */ = {
+			isa = PBXGroup;
+			children = (
+				BC705ED12156B29A00E2BF30 /* LoginVC.swift */,
+				BCACA7A42156AD3C005C715C /* ViewController.swift */,
+				BC705EDC2156EDDC00E2BF30 /* collectionCell.swift */,
+				BC705EDE2156F37700E2BF30 /* Slide.swift */,
+				BC705EE02156F39000E2BF30 /* Slide.xib */,
+			);
+			path = Controlller;
+			sourceTree = "<group>";
+		};
 		BCACA7962156AD3C005C715C = {
 			isa = PBXGroup;
 			children = (
 				BCACA7A12156AD3C005C715C /* iconcept */,
 				BCACA7A02156AD3C005C715C /* Products */,
+				4F78C063D834BEAA7FBDB128 /* Pods */,
+				C482970F92AE506EC32B03B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +141,27 @@
 		BCACA7A12156AD3C005C715C /* iconcept */ = {
 			isa = PBXGroup;
 			children = (
+				BC705ECA2156B26E00E2BF30 /* Controlller */,
+				BC705EC92156B26800E2BF30 /* Model */,
+				BC705EC82156B26000E2BF30 /* Custom */,
+				BC705EC72156B24F00E2BF30 /* Util */,
+				BC705EC62156B24700E2BF30 /* DataSource */,
+				BC705EC42156B16D00E2BF30 /* GoogleService-Info.plist */,
 				BCACA7A22156AD3C005C715C /* AppDelegate.swift */,
-				BCACA7A42156AD3C005C715C /* ViewController.swift */,
 				BCACA7A62156AD3C005C715C /* Main.storyboard */,
 				BCACA7A92156AD3D005C715C /* Assets.xcassets */,
 				BCACA7AB2156AD3D005C715C /* LaunchScreen.storyboard */,
 				BCACA7AE2156AD3D005C715C /* Info.plist */,
 			);
 			path = iconcept;
+			sourceTree = "<group>";
+		};
+		C482970F92AE506EC32B03B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				661A35D1DDACDE9480179348 /* Pods_iconcept.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCACA7B12156AD3D005C715C /* Build configuration list for PBXNativeTarget "iconcept" */;
 			buildPhases = (
+				962AEF8ECB4618EE7F3088A4 /* [CP] Check Pods Manifest.lock */,
 				BCACA79B2156AD3C005C715C /* Sources */,
 				BCACA79C2156AD3C005C715C /* Frameworks */,
 				BCACA79D2156AD3C005C715C /* Resources */,
+				5473AAAC312CC7D3FAD215DB /* [CP] Embed Pods Frameworks */,
+				F532B081D67713EFE685F6C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +199,17 @@
 				TargetAttributes = {
 					BCACA79E2156AD3C005C715C = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,7 +236,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC705EE12156F39000E2BF30 /* Slide.xib in Resources */,
 				BCACA7AD2156AD3D005C715C /* LaunchScreen.storyboard in Resources */,
+				BC705EC52156B16D00E2BF30 /* GoogleService-Info.plist in Resources */,
 				BCACA7AA2156AD3D005C715C /* Assets.xcassets in Resources */,
 				BCACA7A82156AD3C005C715C /* Main.storyboard in Resources */,
 			);
@@ -130,13 +246,102 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5473AAAC312CC7D3FAD215DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iconcept/Pods-iconcept-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iconcept/Pods-iconcept-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		962AEF8ECB4618EE7F3088A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iconcept-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F532B081D67713EFE685F6C8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iconcept/Pods-iconcept-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iconcept/Pods-iconcept-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCACA79B2156AD3C005C715C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC705ECE2156B28F00E2BF30 /* TextField.swift in Sources */,
+				BC705ED62156B4BA00E2BF30 /* DataService.swift in Sources */,
+				BC705ED02156B28F00E2BF30 /* CircleView.swift in Sources */,
+				BC705EDF2156F37700E2BF30 /* Slide.swift in Sources */,
+				BC705ED22156B29B00E2BF30 /* LoginVC.swift in Sources */,
 				BCACA7A52156AD3C005C715C /* ViewController.swift in Sources */,
 				BCACA7A32156AD3C005C715C /* AppDelegate.swift in Sources */,
+				BC705ECF2156B28F00E2BF30 /* RoundedButton.swift in Sources */,
+				BC705EDB2156E75600E2BF30 /* collection.swift in Sources */,
+				BC705ED72156B4BA00E2BF30 /* Localtion.swift in Sources */,
+				BC705EDD2156EDDC00E2BF30 /* collectionCell.swift in Sources */,
+				BC705ED82156B4BA00E2BF30 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +485,14 @@
 		};
 		BCACA7B22156AD3D005C715C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B39CF325DFE89E67974D9A6 /* Pods-iconcept.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iconcept/iconcept.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7984M9FF87;
 				INFOPLIST_FILE = iconcept/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +506,14 @@
 		};
 		BCACA7B32156AD3D005C715C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFBF88B7C3382257472E1561 /* Pods-iconcept.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iconcept/iconcept.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7984M9FF87;
 				INFOPLIST_FILE = iconcept/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
