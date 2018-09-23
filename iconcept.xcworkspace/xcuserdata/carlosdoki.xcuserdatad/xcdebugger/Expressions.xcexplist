@@ -3,12 +3,29 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in eventosTVC.configureCell(evento:):eventosTVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "snapshot as? NSDictionary">
+            </PersistentString>
+            <PersistentString
+               value = "snap as? NSDictionary">
+            </PersistentString>
+            <PersistentString
+               value = "snap2.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in collectionCell.configureCell(_:):collectionCell.swift">
          <PersistentStrings>
             <PersistentString
                value = "value?[0][&quot;URL&quot;] as? String ">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ViewController.viewDidLoad():ViewController.swift">
       </ContextState>
       <ContextState
          contextName = "collectionCell.configureCell(_:):collectionCell.swift">
@@ -19,7 +36,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in ViewController.viewDidLoad():ViewController.swift">
+         contextName = "closure #1 in AgendaVC.CarregaEventos():AgendaVC.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AgendaVC.tableView(_:cellForRowAt:):AgendaVC.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

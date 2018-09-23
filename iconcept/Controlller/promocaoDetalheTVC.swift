@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class promocaoDetalheTVC: UITableViewCell {
 
@@ -14,7 +15,6 @@ class promocaoDetalheTVC: UITableViewCell {
     @IBOutlet weak var valorLbl: UILabel!
     @IBOutlet weak var lojaLbl: UILabel!
     @IBOutlet weak var dataLbl: UILabel!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +25,14 @@ class promocaoDetalheTVC: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureCell(promocao : PromocoesCliente){
+        self.itemLbl.text = promocao.item
+        self.valorLbl.text = String("R$ \(String(format: "%.2f", promocao.valor))")
+        self.lojaLbl.text = promocao.loja
+        self.dataLbl.text = promocao.data
+        
     }
 
 }

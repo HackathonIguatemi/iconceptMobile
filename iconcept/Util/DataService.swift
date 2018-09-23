@@ -19,8 +19,9 @@ class DataService {
     private var _REF_HISTORY = DB_BASE.child("history")
     private var _REF_PREFERENCIAS = DB_BASE.child("preferencias")
     private var _REF_PROMOCAO = DB_BASE.child("promocoes")
-    
+
     private var _REF_POST_IMAGES=STORAGE_BASE.child("preferencias")
+
     
     
     var REF_USERS: DatabaseReference {
@@ -42,6 +43,18 @@ class DataService {
     var REF_USER_CURRENT: DatabaseReference {
         let uid = KeychainWrapper.standard.string(forKey: KEY_UID)
         let user = REF_USERS.child(uid!)
+        return user
+    }
+    
+    var REF_USER_PERSONA: DatabaseReference {
+        let uid = KeychainWrapper.standard.string(forKey: KEY_UID)
+        let user = REF_USERS.child(uid!).child("personal")
+        return user
+    }
+    
+    var REF_USER_EVENTO: DatabaseReference {
+        let uid = KeychainWrapper.standard.string(forKey: KEY_UID)
+        let user = REF_USERS.child(uid!).child("eventos")
         return user
     }
 }

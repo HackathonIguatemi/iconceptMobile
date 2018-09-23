@@ -16,6 +16,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var activityIV: UIActivityIndicatorView!
+    @IBOutlet weak var activityV: UIView!
     
     var collectionItem = [Preferencias]()
     var slides:[Slide] = [];
@@ -23,6 +25,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIV.startAnimating()
+        activityV.isHidden = false
         
         let user = Auth.auth().currentUser
         tituloLbl.text = "Novidades da semana\npara você, \(user!.displayName as!String)."
@@ -46,6 +50,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
             self.collection!.reloadData()
+            self.activityIV.stopAnimating()
+            self.activityV.isHidden = true
         })
         
         

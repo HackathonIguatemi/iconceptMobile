@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC4C5B902157B589001E5F3E /* eventosTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4C5B8F2157B589001E5F3E /* eventosTVC.swift */; };
+		BC4C5B922157B6E8001E5F3E /* eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4C5B912157B6E8001E5F3E /* eventos.swift */; };
 		BC705EC52156B16D00E2BF30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC705EC42156B16D00E2BF30 /* GoogleService-Info.plist */; };
 		BC705ECE2156B28F00E2BF30 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705ECB2156B28E00E2BF30 /* TextField.swift */; };
 		BC705ECF2156B28F00E2BF30 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC705ECC2156B28F00E2BF30 /* RoundedButton.swift */; };
@@ -32,6 +34,9 @@
 		BCFF3E54215779AE00EB8E10 /* promocaoDetalheTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E53215779AE00EB8E10 /* promocaoDetalheTVC.swift */; };
 		BCFF3E56215779CB00EB8E10 /* promocaoDetalheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E55215779CB00EB8E10 /* promocaoDetalheVC.swift */; };
 		BCFF3E5821577CF600EB8E10 /* promocoesCliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E5721577CF600EB8E10 /* promocoesCliente.swift */; };
+		BCFF3E5A21579C6C00EB8E10 /* AgendaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E5921579C6C00EB8E10 /* AgendaVC.swift */; };
+		BCFF3E5C2157A5E000EB8E10 /* AgendaTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E5B2157A5E000EB8E10 /* AgendaTVC.swift */; };
+		BCFF3E602157A6EE00EB8E10 /* personal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E5F2157A6EE00EB8E10 /* personal.swift */; };
 		D195C1C6E5A85CD1106D1146 /* Pods_iconcept.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661A35D1DDACDE9480179348 /* Pods_iconcept.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +44,8 @@
 		4B39CF325DFE89E67974D9A6 /* Pods-iconcept.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iconcept.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iconcept/Pods-iconcept.debug.xcconfig"; sourceTree = "<group>"; };
 		661A35D1DDACDE9480179348 /* Pods_iconcept.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iconcept.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBF88B7C3382257472E1561 /* Pods-iconcept.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iconcept.release.xcconfig"; path = "Pods/Target Support Files/Pods-iconcept/Pods-iconcept.release.xcconfig"; sourceTree = "<group>"; };
+		BC4C5B8F2157B589001E5F3E /* eventosTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventosTVC.swift; sourceTree = "<group>"; };
+		BC4C5B912157B6E8001E5F3E /* eventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventos.swift; sourceTree = "<group>"; };
 		BC705EC42156B16D00E2BF30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BC705ECB2156B28E00E2BF30 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		BC705ECC2156B28F00E2BF30 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -66,6 +73,9 @@
 		BCFF3E53215779AE00EB8E10 /* promocaoDetalheTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promocaoDetalheTVC.swift; sourceTree = "<group>"; };
 		BCFF3E55215779CB00EB8E10 /* promocaoDetalheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promocaoDetalheVC.swift; sourceTree = "<group>"; };
 		BCFF3E5721577CF600EB8E10 /* promocoesCliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promocoesCliente.swift; sourceTree = "<group>"; };
+		BCFF3E5921579C6C00EB8E10 /* AgendaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaVC.swift; sourceTree = "<group>"; };
+		BCFF3E5B2157A5E000EB8E10 /* AgendaTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AgendaTVC.swift; path = /Users/carlosdoki/Desktop/Apps/iconcept/iconcept/Controlller/AgendaTVC.swift; sourceTree = "<absolute>"; };
+		BCFF3E5F2157A6EE00EB8E10 /* personal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +133,8 @@
 				BCFF3E4B215737CA00EB8E10 /* preferencias.swift */,
 				BCFF3E4D21574EA200EB8E10 /* promocoes.swift */,
 				BCFF3E5721577CF600EB8E10 /* promocoesCliente.swift */,
+				BCFF3E5F2157A6EE00EB8E10 /* personal.swift */,
+				BC4C5B912157B6E8001E5F3E /* eventos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +142,7 @@
 		BC705ECA2156B26E00E2BF30 /* Controlller */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF3E5B2157A5E000EB8E10 /* AgendaTVC.swift */,
 				BC705ED12156B29A00E2BF30 /* LoginVC.swift */,
 				BCACA7A42156AD3C005C715C /* ViewController.swift */,
 				BC705EDC2156EDDC00E2BF30 /* collectionCell.swift */,
@@ -140,6 +153,8 @@
 				BCFF3E51215764CD00EB8E10 /* PromocoesTVC.swift */,
 				BCFF3E53215779AE00EB8E10 /* promocaoDetalheTVC.swift */,
 				BCFF3E55215779CB00EB8E10 /* promocaoDetalheVC.swift */,
+				BCFF3E5921579C6C00EB8E10 /* AgendaVC.swift */,
+				BC4C5B8F2157B589001E5F3E /* eventosTVC.swift */,
 			);
 			path = Controlller;
 			sourceTree = "<group>";
@@ -362,10 +377,15 @@
 				BC705ED62156B4BA00E2BF30 /* DataService.swift in Sources */,
 				BCFF3E4E21574EA200EB8E10 /* promocoes.swift in Sources */,
 				BCFF3E5821577CF600EB8E10 /* promocoesCliente.swift in Sources */,
+				BCFF3E602157A6EE00EB8E10 /* personal.swift in Sources */,
+				BC4C5B922157B6E8001E5F3E /* eventos.swift in Sources */,
+				BCFF3E5C2157A5E000EB8E10 /* AgendaTVC.swift in Sources */,
+				BCFF3E5A21579C6C00EB8E10 /* AgendaVC.swift in Sources */,
 				BCFF3E52215764CD00EB8E10 /* PromocoesTVC.swift in Sources */,
 				BC705ED02156B28F00E2BF30 /* CircleView.swift in Sources */,
 				BC705EDF2156F37700E2BF30 /* Slide.swift in Sources */,
 				BC705ED22156B29B00E2BF30 /* LoginVC.swift in Sources */,
+				BC4C5B902157B589001E5F3E /* eventosTVC.swift in Sources */,
 				BCACA7A52156AD3C005C715C /* ViewController.swift in Sources */,
 				BCFF3E4C215737CA00EB8E10 /* preferencias.swift in Sources */,
 				BCACA7A32156AD3C005C715C /* AppDelegate.swift in Sources */,
