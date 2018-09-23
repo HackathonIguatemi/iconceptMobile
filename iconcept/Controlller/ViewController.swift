@@ -7,29 +7,47 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
 
+    @IBOutlet weak var tituloLbl: UILabel!
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var collectionItem = [Collection]()
+    var collectionItem = [Preferencias]()
     var slides:[Slide] = [];
+    var idPromocoes = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let user = Auth.auth().currentUser
+        tituloLbl.text = "Novidades da semana\npara você, \(user!.displayName as!String)."
+        
         // Do any additional setup after loading the view, typically from a nib.
         collection.dataSource = self
         collection.delegate = self
         scrollView.delegate = self
         
-        slides = createSlides()
-        setupSlideScrollView(slides: slides)
+        createSlides()
         
-        pageControl.numberOfPages = slides.count
-        pageControl.currentPage = 0
-        view.bringSubviewToFront(pageControl)
+        DataService.ds.REF_PREFERENCIAS.observe(.value, with: { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshot {
+//                    print("DOKI: \(snap)")
+                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let post = Preferencias(postKey: key, postData: postDict)
+                        self.collectionItem.append(post)
+                    }
+                }
+            }
+            self.collection!.reloadData()
+        })
+        
         
     }
 
@@ -50,6 +68,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return 1
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 171, height: 144)
+    }
+    
+    
     func setupSlideScrollView(slides : [Slide]) {
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
@@ -61,36 +84,49 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    func createSlides() -> [Slide] {
-        
-        let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide1.imageView.image = UIImage(named: "ic_onboarding_1")
-        slide1.labelTitle.text = "A real-life bear"
-        slide1.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
-        
-        let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide2.imageView.image = UIImage(named: "ic_onboarding_2")
-        slide2.labelTitle.text = "A real-life bear"
-        slide2.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
-        
-        let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide3.imageView.image = UIImage(named: "ic_onboarding_3")
-        slide3.labelTitle.text = "A real-life bear"
-        slide3.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
-        
-        let slide4:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide4.imageView.image = UIImage(named: "ic_onboarding_4")
-        slide4.labelTitle.text = "A real-life bear"
-        slide4.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
-        
-        
-        let slide5:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide5.imageView.image = UIImage(named: "ic_onboarding_5")
-        slide5.labelTitle.text = "A real-life bear"
-        slide5.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
-        
-        return [slide1, slide2, slide3, slide4, slide5]
+    func createSlides() {
+      
+        DataService.ds.REF_PROMOCAO.observe(.value, with: { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                self.slides = []
+                for snap in snapshot {
+//                    print("DOKI: \(snap)")
+                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        self.idPromocoes.append(key)
+                        let post = Promocoes(postKey: key, postData: postDict)
+
+                        let tempSlide:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
+                        if let img = post.URL as? String {
+                            if let data = NSData(contentsOf: NSURL(string: img) as! URL) {
+                                tempSlide.imageView.image  = UIImage(data: data as Data)
+                            }
+                        }
+                        tempSlide.labelTitle.text = "\(post.nome)"
+                        self.slides.append(tempSlide)
+                    }
+                }
+            }
+            self.setupSlideScrollView(slides: self.slides)
+            self.pageControl.numberOfPages = self.slides.count
+            self.pageControl.currentPage = 0
+            self.view.bringSubviewToFront(self.pageControl)
+        })
+
     }
+    
+    @IBAction func Teste(_ sender: Any) {
+        
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "detalhesEventoVC") as! detalhesEvento
+        
+        controller.eventoID = idPromocoes[pageControl.currentPage] as! String
+        self.present(controller, animated: true, completion: nil)
+    }
+    @IBAction func pageClicked(_ sender: UIPageControl) {
+        self.performSegue(withIdentifier: "detalhesEvento", sender: nil)
+    }
+    
+    
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
@@ -123,17 +159,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             slides[0].imageView.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
             slides[1].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
             
-        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
-            slides[1].imageView.transform = CGAffineTransform(scaleX: (0.50-percentOffset.x)/0.25, y: (0.50-percentOffset.x)/0.25)
-            slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
-            
-        } else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
-            slides[2].imageView.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
-            slides[3].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
-            
-        } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
-            slides[3].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
-            slides[4].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
+//        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.50) {
+//            slides[1].imageView.transform = CGAffineTransform(scaleX: (0.50-percentOffset.x)/0.25, y: (0.50-percentOffset.x)/0.25)
+//            slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.50, y: percentOffset.x/0.50)
+//            
+//        } else if(percentOffset.x > 0.50 && percentOffset.x <= 0.75) {
+//            slides[2].imageView.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
+//            slides[3].imageView.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
+//            
+//        } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
+//            slides[3].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
+//            slides[4].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
         }
     }
 }

@@ -15,15 +15,15 @@ import FirebaseAuth
 
 class LoginVC: UIViewController, FBSDKLoginButtonDelegate {
     
-    @IBOutlet weak var fbButtonLoginButton: FBSDKLoginButton!
+    @IBOutlet var loginView: UIView!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-       // fbButtonLoginButton.delegate = self
-        //fbButtonLoginButton.readPermissions = [ "email" ]
-        
+        let loginButton = FBSDKLoginButton()
+        loginView.addSubview(loginButton)
+        loginButton.frame = CGRect(x: 16, y: 50, width: loginView.frame.width - 32, height: 50)
+        loginButton.delegate = self
     }
     
     
@@ -33,17 +33,47 @@ class LoginVC: UIViewController, FBSDKLoginButtonDelegate {
             return
         }
         print("Sucessfully logged in with Facebook...")
-//        let credentials = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-//        Auth.auth().signInAndRetrieveData(with: credentials, completion: { (user, error) in
-//            if let err = error {
-//                print("Failed to create a Firebase User", err)
-//                return
-//            }
-//        })
+        let credentials = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+        Auth.auth().signIn(with: credentials, completion: { (user, error) in
+            if let err = error {
+                print("Failed to create a Firebase User", err)
+                return
+            }
+            
+            guard let uid = user?.uid else { return }
+            userUUID = uid
+            let ref = Database.database().reference()
+            let users = ref.child("users").child(uid)
+            users.child("cpf").setValue("")
+            users.child("IDFacebook").setValue(user?.uid)
+            users.child("nome").setValue(user?.displayName)
+            users.child("fcmTokennotification").setValue(fcmTokennotification)
+            
+            let keychainResult = KeychainWrapper.standard.set((user?.uid)!, forKey: KEY_UID)
+            print("DOKI: Data saved to keychain \(keychainResult)")
+            
+            print("Firebase user created", uid)
+            self.performSegue(withIdentifier: "menuinicial", sender: nil)
+
+        })
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("Did logout Facebook")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //let defaults = UserDefaults.standard
+        //defaults.set("54FjYF8UwBS5IVbeitX9Pq6IbfF3", forKey: "authVID")
+        //let keychainResult = KeychainWrapper.standard.set(("54FjYF8UwBS5IVbeitX9Pq6IbfF3"), forKey: KEY_UID)
+
+        
+        if let user = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            userUUID = user
+            print("DOKI: ID found in keychain")
+            performSegue(withIdentifier: "menuinicial", sender: nil)
+        } else {
+        }
     }
 }
 

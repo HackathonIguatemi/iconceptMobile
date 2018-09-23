@@ -16,48 +16,35 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qFb-NA-pcs">
-                    <rect key="frame" x="0.0" y="70" width="375" height="128"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qFb-NA-pcs">
+                    <rect key="frame" x="0.0" y="20" width="375" height="120"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="128" id="bYe-81-nDM"/>
+                        <constraint firstAttribute="height" constant="120" id="bYe-81-nDM"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fv-C2-XN4">
-                    <rect key="frame" x="0.0" y="252" width="375" height="100"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nova coleção Primavera 2018" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTZ-ht-KUc">
+                    <rect key="frame" x="12" y="36" width="200" height="48"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="66X-Z9-1Sa"/>
+                        <constraint firstAttribute="width" constant="200" id="cYr-LY-FEc"/>
+                        <constraint firstAttribute="height" constant="48" id="i51-YV-eqY"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTZ-ht-KUc">
-                    <rect key="frame" x="0.0" y="218" width="375" height="24"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="24" id="wmx-xm-9n9"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="gTZ-ht-KUc" firstAttribute="top" secondItem="qFb-NA-pcs" secondAttribute="top" constant="16" id="17w-w5-HeZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qFb-NA-pcs" secondAttribute="trailing" id="6BU-Tz-euM"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Fv-C2-XN4" secondAttribute="trailing" id="92A-RU-pgN"/>
-                <constraint firstItem="gTZ-ht-KUc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HG2-nW-32M"/>
-                <constraint firstItem="1Fv-C2-XN4" firstAttribute="top" secondItem="gTZ-ht-KUc" secondAttribute="bottom" constant="10" id="WqC-tn-ZAK"/>
-                <constraint firstItem="qFb-NA-pcs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="bDM-fg-iWZ"/>
+                <constraint firstItem="gTZ-ht-KUc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="XzR-hc-bZ6"/>
+                <constraint firstItem="qFb-NA-pcs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="bDM-fg-iWZ"/>
                 <constraint firstItem="qFb-NA-pcs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="h1H-U2-5VM"/>
-                <constraint firstItem="gTZ-ht-KUc" firstAttribute="top" secondItem="qFb-NA-pcs" secondAttribute="bottom" constant="20" id="ifX-js-Fto"/>
-                <constraint firstItem="1Fv-C2-XN4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qOp-a0-NmP"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gTZ-ht-KUc" secondAttribute="trailing" id="xXv-X7-E6j"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="imageView" destination="qFb-NA-pcs" id="Cce-sk-isO"/>
-                <outlet property="labelDesc" destination="1Fv-C2-XN4" id="zCZ-ej-Xcv"/>
-                <outlet property="labelTitle" destination="1Fv-C2-XN4" id="qiZ-g2-JlN"/>
+                <outlet property="labelTitle" destination="gTZ-ht-KUc" id="QTT-xH-iqG"/>
             </connections>
         </view>
     </objects>

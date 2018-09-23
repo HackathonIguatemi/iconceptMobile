@@ -11,11 +11,17 @@ import Firebase
 import SwiftKeychainWrapper
 
 let DB_BASE = Database.database().reference()
+let STORAGE_BASE = Storage.storage().reference()
 
 class DataService {
     static let ds = DataService()
     private var _REF_USERS = DB_BASE.child("users")
     private var _REF_HISTORY = DB_BASE.child("history")
+    private var _REF_PREFERENCIAS = DB_BASE.child("preferencias")
+    private var _REF_PROMOCAO = DB_BASE.child("promocoes")
+    
+    private var _REF_POST_IMAGES=STORAGE_BASE.child("preferencias")
+    
     
     var REF_USERS: DatabaseReference {
         return _REF_USERS
@@ -23,6 +29,14 @@ class DataService {
     
     var REF_HISTORY: DatabaseReference {
         return _REF_HISTORY
+    }
+    
+    var REF_PREFERENCIAS: DatabaseReference {
+        return _REF_PREFERENCIAS
+    }
+    
+    var REF_PROMOCAO: DatabaseReference {
+        return _REF_PROMOCAO
     }
     
     var REF_USER_CURRENT: DatabaseReference {

@@ -17,4 +17,5 @@ target 'iconcept' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'Firebase/Messaging'
+  pod 'Firebase/Storage'
 end

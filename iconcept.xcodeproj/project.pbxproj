@@ -24,6 +24,14 @@
 		BCACA7A82156AD3C005C715C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCACA7A62156AD3C005C715C /* Main.storyboard */; };
 		BCACA7AA2156AD3D005C715C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCACA7A92156AD3D005C715C /* Assets.xcassets */; };
 		BCACA7AD2156AD3D005C715C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCACA7AB2156AD3D005C715C /* LaunchScreen.storyboard */; };
+		BCFF3E4A21572B1000EB8E10 /* detalhesEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E4921572B1000EB8E10 /* detalhesEvento.swift */; };
+		BCFF3E4C215737CA00EB8E10 /* preferencias.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E4B215737CA00EB8E10 /* preferencias.swift */; };
+		BCFF3E4E21574EA200EB8E10 /* promocoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E4D21574EA200EB8E10 /* promocoes.swift */; };
+		BCFF3E502157648A00EB8E10 /* PromocoesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E4F2157648A00EB8E10 /* PromocoesVC.swift */; };
+		BCFF3E52215764CD00EB8E10 /* PromocoesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E51215764CD00EB8E10 /* PromocoesTVC.swift */; };
+		BCFF3E54215779AE00EB8E10 /* promocaoDetalheTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E53215779AE00EB8E10 /* promocaoDetalheTVC.swift */; };
+		BCFF3E56215779CB00EB8E10 /* promocaoDetalheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E55215779CB00EB8E10 /* promocaoDetalheVC.swift */; };
+		BCFF3E5821577CF600EB8E10 /* promocoesCliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF3E5721577CF600EB8E10 /* promocoesCliente.swift */; };
 		D195C1C6E5A85CD1106D1146 /* Pods_iconcept.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661A35D1DDACDE9480179348 /* Pods_iconcept.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +58,14 @@
 		BCACA7A92156AD3D005C715C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCACA7AC2156AD3D005C715C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCACA7AE2156AD3D005C715C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCFF3E4921572B1000EB8E10 /* detalhesEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalhesEvento.swift; sourceTree = "<group>"; };
+		BCFF3E4B215737CA00EB8E10 /* preferencias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preferencias.swift; sourceTree = "<group>"; };
+		BCFF3E4D21574EA200EB8E10 /* promocoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promocoes.swift; sourceTree = "<group>"; };
+		BCFF3E4F2157648A00EB8E10 /* PromocoesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromocoesVC.swift; sourceTree = "<group>"; };
+		BCFF3E51215764CD00EB8E10 /* PromocoesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromocoesTVC.swift; sourceTree = "<group>"; };
+		BCFF3E53215779AE00EB8E10 /* promocaoDetalheTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promocaoDetalheTVC.swift; sourceTree = "<group>"; };
+		BCFF3E55215779CB00EB8E10 /* promocaoDetalheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promocaoDetalheVC.swift; sourceTree = "<group>"; };
+		BCFF3E5721577CF600EB8E10 /* promocoesCliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promocoesCliente.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +120,9 @@
 			isa = PBXGroup;
 			children = (
 				BC705EDA2156E75600E2BF30 /* collection.swift */,
+				BCFF3E4B215737CA00EB8E10 /* preferencias.swift */,
+				BCFF3E4D21574EA200EB8E10 /* promocoes.swift */,
+				BCFF3E5721577CF600EB8E10 /* promocoesCliente.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +135,11 @@
 				BC705EDC2156EDDC00E2BF30 /* collectionCell.swift */,
 				BC705EDE2156F37700E2BF30 /* Slide.swift */,
 				BC705EE02156F39000E2BF30 /* Slide.xib */,
+				BCFF3E4921572B1000EB8E10 /* detalhesEvento.swift */,
+				BCFF3E4F2157648A00EB8E10 /* PromocoesVC.swift */,
+				BCFF3E51215764CD00EB8E10 /* PromocoesTVC.swift */,
+				BCFF3E53215779AE00EB8E10 /* promocaoDetalheTVC.swift */,
+				BCFF3E55215779CB00EB8E10 /* promocaoDetalheVC.swift */,
 			);
 			path = Controlller;
 			sourceTree = "<group>";
@@ -200,6 +224,9 @@
 					BCACA79E2156AD3C005C715C = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -331,17 +358,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC705ECE2156B28F00E2BF30 /* TextField.swift in Sources */,
+				BCFF3E54215779AE00EB8E10 /* promocaoDetalheTVC.swift in Sources */,
 				BC705ED62156B4BA00E2BF30 /* DataService.swift in Sources */,
+				BCFF3E4E21574EA200EB8E10 /* promocoes.swift in Sources */,
+				BCFF3E5821577CF600EB8E10 /* promocoesCliente.swift in Sources */,
+				BCFF3E52215764CD00EB8E10 /* PromocoesTVC.swift in Sources */,
 				BC705ED02156B28F00E2BF30 /* CircleView.swift in Sources */,
 				BC705EDF2156F37700E2BF30 /* Slide.swift in Sources */,
 				BC705ED22156B29B00E2BF30 /* LoginVC.swift in Sources */,
 				BCACA7A52156AD3C005C715C /* ViewController.swift in Sources */,
+				BCFF3E4C215737CA00EB8E10 /* preferencias.swift in Sources */,
 				BCACA7A32156AD3C005C715C /* AppDelegate.swift in Sources */,
 				BC705ECF2156B28F00E2BF30 /* RoundedButton.swift in Sources */,
 				BC705EDB2156E75600E2BF30 /* collection.swift in Sources */,
 				BC705ED72156B4BA00E2BF30 /* Localtion.swift in Sources */,
+				BCFF3E502157648A00EB8E10 /* PromocoesVC.swift in Sources */,
 				BC705EDD2156EDDC00E2BF30 /* collectionCell.swift in Sources */,
+				BCFF3E56215779CB00EB8E10 /* promocaoDetalheVC.swift in Sources */,
 				BC705ED82156B4BA00E2BF30 /* Constants.swift in Sources */,
+				BCFF3E4A21572B1000EB8E10 /* detalhesEvento.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
